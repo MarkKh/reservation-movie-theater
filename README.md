@@ -10,9 +10,9 @@ Our project consists of
 
 ## Technology stack. :technologist: :school:
 ### reservation movie theater
-:white_check_mark: [HTML](https://html.com) for creating frontend application.
-:white_check_mark: [JavaScript](https://www.javascript.com) for building our frontend HTML application
-:white_check_mark: [Bootstrap](https://getbootstrap.com) for styling our application.
+- :white_check_mark: [HTML](https://html.com) for creating frontend application.
+- :white_check_mark: [JavaScript](https://www.javascript.com) for building our frontend HTML application
+- :white_check_mark: [Bootstrap](https://getbootstrap.com) for styling our application.
 
 
 Our main language of development is [PHP](https://www.php.net)
