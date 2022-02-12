@@ -24,10 +24,7 @@ First, check the required
 - `Bitnami` Bitnami Applications for PHP or other application server.
   You can check by typing
   ```
-  http://localhost:8080
-
-  ```
-  into the your browser.
+  http://localhost:8080 into the your browser.
   
 You can download Bitnami [here](https://bitnami.com)
 
