@@ -23,7 +23,7 @@ Our main language of development is [PHP](https://www.php.net)
 ### Check the required
 First, check the required 
 
-- `Bitnami` Bitnami Applications for PHP or other application server.
+- Bitnami Applications for PHP or other application server.
   You can check by typing
   ```
   http://localhost:8080
