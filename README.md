@@ -19,8 +19,8 @@ Our main language of development is [PHP](https://www.php.net)
 ### Reservation movie theater Database.
 - [MySQL Workbench](https://www.mysql.com/products/workbench/) for our database.
 
-## Prequistics.
-### Check the required
+## Prequistics. :bulb:   
+### Check the required :pushpin: :pushpin: :pushpin:
 First, check the required 
 
 - Bitnami Applications for PHP or other application server.
@@ -32,9 +32,9 @@ First, check the required
   
 You can download Bitnami [here](https://bitnami.com)
 
-## Running the application.
+## Running the application. :crystal_ball: :crystal_ball:	 :crystal_ball:	
 
-You go to your browser and paste url `http://localhost:8080` will see the web application runs at `http://localhost:8080`
+You go to your browser and paste url `http://localhost:8080/Name your project folder.` will see the web application runs at `http://localhost:8080/Name your project folder.`
 
 
 ### Database setup (Reservation movie theater API) :card_index_dividers:
