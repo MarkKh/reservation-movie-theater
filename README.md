@@ -25,7 +25,6 @@ First, check the required
   You can check by typing
   ```
   http://localhost:8080
-
   ```
   into the your browser.
   
