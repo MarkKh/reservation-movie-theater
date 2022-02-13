@@ -32,5 +32,5 @@ First, check the required
 You can download Bitnami [here](https://bitnami.com)
 
 ## Running the application.
-```
-You go to your browser and paste url `http://localhost:8080` will see the web application runs at `http://localhost:8080
+
+You go to your browser and paste url `http://localhost:8080` will see the web application runs at `http://localhost:8080`
