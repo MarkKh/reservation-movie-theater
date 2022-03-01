@@ -50,6 +50,10 @@
                                 <label for="name">Theater Name</label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter Theater Name" required>
                             </div>
+                            <div class="form-group">
+                                <label for="seats_no">seats</label>
+                                <input type="text" class="form-control" name="seats_no" id="seats_no" placeholder="Enter Theater Seats" required>
+                            </div>
                             <button type="submit" class="btn btn-primary mr-2" name="addt">Submit</button>
                             <button class="btn btn-light">Cancel</button>
                         </form>
@@ -66,6 +70,28 @@
                 <div class="card">
                     <div class="card-body">
                         <p class="card-title">All Theater</p>
+                        
+                        <?php
+                        if (isset($_POST['search'])) {
+                            $search = $_POST['search'];
+                            $sql = "SELECT * FROM theater WHERE name LIKE '%$search%'";
+                        }else{
+                            $sql = "SELECT * FROM theater $where";
+                        }
+                            $query = $conn->query($sql);
+                        ?>
+
+                        <form action="" method="post">
+                            <div class="input-group">
+                                <div class="form-outline">
+                                    <input type="search" id="search" name="search" class="form-control" placeholder="Search by theater name" value="<?php echo @$_POST['search']; ?>" />
+                                </div> &nbsp;
+                                <button type="submit" class="btn btn-primary btn-rounded btn-icon">
+                                    <i class="ti-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <br>
                         <div class="row">
                             <div class="col-12">
                                 <div class="table-responsive">
@@ -74,20 +100,23 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Name</th>
+                                                <th>Seats</th>
                                                 <th>Tool</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql = "SELECT * FROM theater $where";
-                                            $query = $conn->query($sql);
+                                            
                                             while ($row = $query->fetch_assoc()) {
+                                                $id = $row['id'];
                                                 echo "
                                                     <tr>
                                                     <td>" . $row['id'] . "</td>
                                                     <td>" . $row['name'] . "</td>
+                                                    <td>" . $row['seats_no'] . "</td>
                                                     <td>
-                                                    
+                                                    <a href='theateredit.php?GetID=$id'><input type='button' value='update' class='btn btn-primary btn-xs edit_data' /></a>
+                                                    <a href='theaterdel.php?delID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                     </td>
                                                     </tr>
                                                 ";

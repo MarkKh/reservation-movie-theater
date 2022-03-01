@@ -49,7 +49,7 @@ if (isset($_SESSION['success'])) {
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" id="description" name="description" row="6" placeholder="Enter Movie Description"></textarea>
+                                <input type="text" class="form-control" name="description" id="description" placeholder="Enter Movie Description">
                             </div>
                             <div class="form-group">
                                 <label for="director">Director</label>

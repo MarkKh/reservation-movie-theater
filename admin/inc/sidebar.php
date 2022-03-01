@@ -32,17 +32,15 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">Users</span>
-              <i class="menu-arrow"></i>
+            <a class="nav-link" href="screening.php">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Screening</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="icon-grid-2 menu-icon"></i>
-              <span class="menu-title">Check Status</span>
-              <i class="menu-arrow"></i>
+            <a class="nav-link" href="user.php">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Users</span>
             </a>
           </li>
           

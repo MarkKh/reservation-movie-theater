@@ -10,13 +10,13 @@
   -ms-transition: all $action-transition-duration $action-transition-timing-function;
   font-size: calc(#{$default-font-size} - 0.05rem);
   font-family: $type1;
-  font-weight: 400;
+  font-weight: 50;
   border-top: 1px solid rgba($black, .06);
   a {
     color: theme-color(primary);
     font-size: inherit;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 50px) {
     margin-left: 0;
     width: 100%;
   }

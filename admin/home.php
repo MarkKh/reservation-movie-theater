@@ -16,7 +16,7 @@
                         <div class="col-md-6 grid-margin stretch-card">
                             <div class="card tale-bg">
                                 <div class="card-people mt-auto">
-                                    <img src="images/dashboard/people.svg" alt="people">
+                                    <img src="images/admin/people.png" alt="people">
                                     <div class="weather-info">
                                         <div class="d-flex">
 
@@ -36,10 +36,10 @@
                                             <h4 class="mb-4">Total Movie</h4>
 
                                             <?php
-                                                $sql = "SELECT * FROM movie";
-                                                $query = $conn->query($sql);
+                                            $sql = "SELECT * FROM movie";
+                                            $query = $conn->query($sql);
 
-                                                echo "<p class='fs-30 mb-2'>".$query->num_rows."</p>";
+                                            echo "<p class='fs-30 mb-2'>" . $query->num_rows . "</p>";
                                             ?>
 
                                         </div>
@@ -49,15 +49,15 @@
                                     <div class="card card-dark-blue">
                                         <div class="card-body">
                                             <h4 class="mb-4">Total Theater</h4>
-                                            
-                                            <?php
-                                                $sql = "SELECT * FROM theater";
-                                                $query = $conn->query($sql);
 
-                                                echo "<p class='fs-30 mb-2'>".$query->num_rows."</p>";
+                                            <?php
+                                            $sql = "SELECT * FROM theater";
+                                            $query = $conn->query($sql);
+
+                                            echo "<p class='fs-30 mb-2'>" . $query->num_rows . "</p>";
                                             ?>
 
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -67,19 +67,33 @@
                                     <div class="card card-light-blue">
                                         <div class="card-body">
                                             <h4 class="mb-4">Total User</h4>
-                                            
-                                            <?php
-                                                $sql = "SELECT * FROM users";
-                                                $query = $conn->query($sql);
 
-                                                echo "<p class='fs-30 mb-2'>".$query->num_rows."</p>";
+                                            <?php
+                                            $sql = "SELECT * FROM users";
+                                            $query = $conn->query($sql);
+
+                                            echo "<p class='fs-30 mb-2'>" . $query->num_rows . "</p>";
                                             ?>
 
 
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="col-md-6 stretch-card transparent">
+                                    <div class="card card-light-danger">
+                                        <div class="card-body">
+                                            <h4 class="mb-4">Total Screening</h4>
+
+                                            <?php
+                                            $sql = "SELECT * FROM show_movie";
+                                            $query = $conn->query($sql);
+
+                                            echo "<p class='fs-30 mb-2'>" . $query->num_rows . "</p>";
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

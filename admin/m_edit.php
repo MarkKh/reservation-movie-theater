@@ -29,11 +29,11 @@
 			$_SESSION['success'] = 'update successfully';
 			header("location:movieall.php");
 		} else {
-			$_SESSION['error'] = 'update is not successfully';
+			$_SESSION['error'] = $conn->error;
 		}
 	} else {
 		header("location:movieall.php");
 	}
-
+	header("location:movieall.php");
 
 	?>

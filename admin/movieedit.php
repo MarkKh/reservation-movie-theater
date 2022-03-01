@@ -1,22 +1,22 @@
 <?php include 'inc/session.php'; ?>
 <?php include 'inc/header.php'; ?>
 <?php
-    $id = $_GET['GetID'];
-    $query = "SELECT * FROM movie WHERE id = '$id'";
-    $result = mysqli_query($conn, $query);
+$id = $_GET['GetID'];
+$query = "SELECT * FROM movie WHERE id = '$id'";
+$result = mysqli_query($conn, $query);
 
-    while ($row = mysqli_fetch_assoc($result)){
+while ($row = mysqli_fetch_assoc($result)) {
 
-        $name = $row['name'];
-        $description = $row['description'];
-        $director = $row['director'];
-        $duration = $row['duration'];
-        $languages = $row['languages'];
-        $price_per_tic = $row['price_per_tic'];
-        $trailers = $row['trailers'];
-        $category = $row['category'];
-        $photo = $row['photo'];
-    }
+    $name = $row['name'];
+    $description = $row['description'];
+    $director = $row['director'];
+    $duration = $row['duration'];
+    $languages = $row['languages'];
+    $price_per_tic = $row['price_per_tic'];
+    $trailers = $row['trailers'];
+    $category = $row['category'];
+    $photo = $row['photo'];
+}
 ?>
 
 <body>
@@ -43,7 +43,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="description">Description</label>
-                                                <textarea class="form-control" id="description" name="description" ><?php echo $description; ?></textarea>
+                                                <input type="text" class="form-control" name="description" id="description" value="<?php echo $description; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="director">Director</label>
@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="trailers">Trailers</label>
-                                                <textarea type="text" class="form-control" name="trailers" id="trailers" ><?php echo $trailers; ?></textarea>
+                                                <textarea type="text" class="form-control" name="trailers" id="trailers"><?php echo $trailers; ?></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="category">Category</label>

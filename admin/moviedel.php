@@ -1,9 +1,9 @@
 <?php
 	include 'inc/session.php';
 
-	if(isset($_GET['delID']))
+	if(isset($_GET['GetID']))
          {
-             $id = $_GET['delID'];
+             $id = $_GET['GetID'];
              $query = " delete from movie where id = '".$id."'";
              $result = mysqli_query($conn,$query);
              if($result)
@@ -13,7 +13,8 @@
              }
              else
              {
-				$_SESSION['error'] = 'Select item to delete first';
+				$_SESSION['error'] = '';
+                header("location:movieall.php");
              }
         }
          else

@@ -35,12 +35,38 @@ if (isset($_SESSION['success'])) {
 }
 ?>
 
+
 <div class="content-wrapper">
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
                     <p class="card-title">All Movie</p>
+
+                    <?php
+                        if (isset($_POST['search'])) {
+                            $search = $_POST['search'];
+                            $sql = "SELECT * FROM movie WHERE name LIKE '%$search%'";
+                        }else{
+
+                            $sql = "SELECT * FROM movie $where";
+                        }
+                        $query = $conn->query($sql);
+                    ?>
+
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <div class="form-outline">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Search by movie name" value="<?php echo @$_POST['search']; ?>" />
+                            </div> &nbsp;
+                            <button type="submit" class="btn btn-primary btn-rounded btn-icon">
+                                <i class="ti-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <br>
+
                     <div class="row">
                         <div class="col-12">
                             <div class="table-responsive">
@@ -58,9 +84,6 @@ if (isset($_SESSION['success'])) {
                                     <tbody>
 
                                         <?php
-                                        $sql = "SELECT * FROM movie $where";
-                                        $query = $conn->query($sql);
-
                                         while ($row = $query->fetch_assoc()) {
                                             $id = $row['id'];
                                             echo "
@@ -69,7 +92,6 @@ if (isset($_SESSION['success'])) {
                                                     <td>
                                                         <div class='nav-profile'>
                                                             <img src='images/movie/" . $row['photo'] . "' width='70px'>                                                        
-                                                            <a href='movieinfo.php?GetID=$id'><input type='button' value='edit' class='btn btn-darkgray btn-xs view_data' /></a>
                                                         <div>
                                                     </td>
                                                     <td>" . $row['name'] . "</td>
@@ -79,7 +101,7 @@ if (isset($_SESSION['success'])) {
                                                     <td>
                                                             <a href='movieinfo.php?GetID=$id'><input type='button' value='info' class='btn btn-warning btn-xs view_data' /></a>
                                                             <a href='movieedit.php?GetID=$id'><input type='button' value='update' class='btn btn-primary btn-xs edit_data' /></a>
-                                                            <a href='moviedel.php?delID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
+                                                            <a href='moviedel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                           
                                                     </td>
                                                     </tr>

@@ -3,9 +3,10 @@
 
 	if(isset($_POST['addt'])){
 		$name = $_POST['name'];
+		$seats_no = $_POST['seats_no'];
 
 
-		$sql = "INSERT INTO theater (name) VALUES ('$name')";
+		$sql = "INSERT INTO theater (name,seats_no) VALUES ('$name','$seats_no')";
 
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'theater has been added';
