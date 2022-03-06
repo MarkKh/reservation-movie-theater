@@ -70,7 +70,6 @@ if (isset($_SESSION['success'])) {
                                 <table class="display expandable-table" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>User Name</th>
                                             <th>Mobile Number</th>
                                             <th>Email</th>
@@ -85,14 +84,13 @@ if (isset($_SESSION['success'])) {
                                             $id = $row['id'];
                                             echo "
                                                     <tr>
-                                                    <td>" . $row['id'] . "</td>
                                                     <td>" . $row['name'] . "</td>
                                                     <td>" . $row['mobile_number'] . "</td>
                                                     <td>" . $row['email'] . "</td>
                                                     <td>" . $row['password'] . "</td>
                                                     <td>
                                                     <a href='useredit.php?GetID=$id'><input type='button' value='update' class='btn btn-primary btn-xs edit_data' /></a>
-                                                    <a href='userdel.php?delID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
+                                                    <a href='usercheckdel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                     </td>
                                                     </tr>
                                                 ";

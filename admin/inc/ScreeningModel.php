@@ -131,7 +131,6 @@ if (isset($_SESSION['success'])) {
                                 <table class="display expandable-table" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>Movie</th>
                                             <th>Theater</th>
                                             <th>Date-Time</th>
@@ -145,12 +144,11 @@ if (isset($_SESSION['success'])) {
                                             $id = $row['id'];
                                             echo "
                                                     <tr>
-                                                    <td>" . $id . "</td>
                                                     <td>" . $row['mname'] . "</td>
                                                     <td>" . $row['tname'] . "</td>
                                                     <td>" . $row['datetime'] . "</td>
                                                     <td>
-                                                    <a href='screeningdel.php?delID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
+                                                    <a href='screeningcheckdel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                     </td>
                                                     </tr>
                                                 ";

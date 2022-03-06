@@ -37,7 +37,7 @@ if (isset($_POST['addm'])) {
 	}
 
 	if ($upload != '') {
-		move_uploaded_file($_FILES['photo']['tmp_name'], 'C:\Bitnami\wampstack-8.0.13-0\apache2\htdocs\resmovie\admin\images\movie' . $filename);
+		move_uploaded_file($_FILES['photo']['tmp_name'], 'admin/images/movie' . $filename);
 	}
 
 	$sql = "INSERT INTO movie (name,description,director,duration,languages,price_per_tic,trailers,category,photo) VALUES ('$name','$description','$director','$duration','$languages','$price_per_tic','$trailers','$category','$newname')";

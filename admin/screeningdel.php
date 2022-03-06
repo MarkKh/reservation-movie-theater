@@ -13,12 +13,13 @@
              }
              else
              {
-				$_SESSION['error'] = 'Select item to delete first';
+				$_SESSION['error'] = 'This show have reservations';
              }
         }
          else
          {
              header("location:screening.php");
          }
+         header("location:screening.php");
 ?>
 

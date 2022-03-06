@@ -98,7 +98,6 @@
                                     <table class="display expandable-table" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
                                                 <th>Name</th>
                                                 <th>Seats</th>
                                                 <th>Tool</th>
@@ -111,12 +110,11 @@
                                                 $id = $row['id'];
                                                 echo "
                                                     <tr>
-                                                    <td>" . $row['id'] . "</td>
                                                     <td>" . $row['name'] . "</td>
                                                     <td>" . $row['seats_no'] . "</td>
                                                     <td>
                                                     <a href='theateredit.php?GetID=$id'><input type='button' value='update' class='btn btn-primary btn-xs edit_data' /></a>
-                                                    <a href='theaterdel.php?delID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
+                                                    <a href='theatercheckdel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                     </td>
                                                     </tr>
                                                 ";

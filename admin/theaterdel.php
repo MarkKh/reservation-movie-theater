@@ -13,12 +13,14 @@
              }
              else
              {
-				$_SESSION['error'] = 'Select item to delete first';
+				$_SESSION['error'] = 'The theater is showing';
              }
         }
          else
          {
              header("location:theater.php");
+
          }
+         header("location:theater.php");
 ?>
 

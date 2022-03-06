@@ -13,7 +13,7 @@
              }
              else
              {
-				$_SESSION['error'] = '';
+				$_SESSION['error'] = 'The movie is showing';
                 header("location:movieall.php");
              }
         }

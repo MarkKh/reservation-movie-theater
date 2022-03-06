@@ -73,7 +73,6 @@ if (isset($_SESSION['success'])) {
                                 <table class="display expandable-table" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>Photo</th>
                                             <th>Name</th>
                                             <th>Duration</th>
@@ -88,7 +87,6 @@ if (isset($_SESSION['success'])) {
                                             $id = $row['id'];
                                             echo "
                                                     <tr>
-                                                    <td>" . $row['id'] . "</td>
                                                     <td>
                                                         <div class='nav-profile'>
                                                             <img src='images/movie/" . $row['photo'] . "' width='70px'>                                                        
@@ -101,7 +99,7 @@ if (isset($_SESSION['success'])) {
                                                     <td>
                                                             <a href='movieinfo.php?GetID=$id'><input type='button' value='info' class='btn btn-warning btn-xs view_data' /></a>
                                                             <a href='movieedit.php?GetID=$id'><input type='button' value='update' class='btn btn-primary btn-xs edit_data' /></a>
-                                                            <a href='moviedel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
+                                                            <a href='moviecheckdel.php?GetID=$id'><input type='button' value='delete' class='btn btn-danger btn-xs delete_data' /></a>
                                                           
                                                     </td>
                                                     </tr>

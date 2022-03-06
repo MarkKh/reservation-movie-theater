@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $price_per_tic = $row['price_per_tic'];
     $trailers = $row['trailers'];
     $category = $row['category'];
-    $photo = $row['photo'];
+    $m_photo = $row['photo'];
 }
 ?>
 
@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <p><b>Description</b> : <?php echo $description ?></p><br>
                             <div class="row">
                                 <?php echo $trailers ?><br> &nbsp;&nbsp;&nbsp;
-                                <img src='images/movie/<?php echo $photo ?>' width="200px">
+                                <img src="images/movie/<?php echo $m_photo ?>" width="200">
                             </div>
                         </div>
                     </div>

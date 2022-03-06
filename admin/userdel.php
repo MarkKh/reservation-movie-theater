@@ -13,12 +13,13 @@
              }
              else
              {
-				$_SESSION['error'] = 'Select item to delete first';
+				$_SESSION['error'] = 'User hve reservations';
              }
         }
          else
          {
              header("location:user.php");
          }
+         header("location:user.php");
 ?>
 

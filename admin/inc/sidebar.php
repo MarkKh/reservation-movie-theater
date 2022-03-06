@@ -43,6 +43,12 @@
               <span class="menu-title">Users</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="res.php">
+              <i class="icon-check menu-icon"></i>
+              <span class="menu-title">Reservations</span>
+            </a>
+          </li>
           
         </ul>
       </nav>

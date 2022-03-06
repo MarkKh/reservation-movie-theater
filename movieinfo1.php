@@ -34,7 +34,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     $theater_name = $row['tname'];
     $datetime = $row['dt'];
 }
+
 ?>
+
 
 <body>
     <div id="wrapper">

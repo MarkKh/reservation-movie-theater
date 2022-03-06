@@ -7,13 +7,19 @@
         <div id='works_01' class='owl-carousel owl-theme owl-style-02'>
 
             <?php
-            $sql = 'SELECT show_movie.id as id,show_movie.datetime as dt,movie.name as mname,movie.photo as mphoto,movie.duration as md,movie.price_per_tic as price,movie.category as mcat,theater.name as tname FROM show_movie
+            $sql = 'SELECT show_movie.id as id,show_movie.datetime as dt,movie.name as mname,movie.photo as mphoto,movie.duration as md,movie.price_per_tic as price,movie.category as mcat,theater.name as tname,theater.seats_no as tseat FROM show_movie
             inner join movie on movie.id = show_movie.movie_id
-            inner join theater on theater.id = show_movie.theater_id ' ;
+            inner join theater on theater.id = show_movie.theater_id ';
             $query = $conn->query($sql);
+
+            $count = "SELECT count(reservation.id) FROM reservation
+            inner join show_movie on reservation.show_id = show_movie.id
+            where '$id' ";
+            $qq = mysqli_query($conn, $count);
 
             while ($row = $query->fetch_assoc()) {
                 $id = $row['id'];
+                
                 echo "
                 <div class='owl-work-item'>
                     <div class='portfolio-ver-01'>
@@ -32,9 +38,11 @@
                             <div class='float-left'>
                                 <a href='movieinfo1.php?GetID=$id'><button type='button' class='btn btn-warning'>info</button></a>
                             </div>
+                               
                             <div class='float-right'>
                                 <a href='reservation.php?GetID=$id'><button type='button' class='btn btn-danger'>buy now</button></a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -47,7 +55,7 @@
 
 
 
-            
+
 
 
         </div><!-- end row -->
